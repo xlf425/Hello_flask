@@ -11,7 +11,7 @@ def home():
     if request.method == 'POST':
         pseudo = request.form.get('pseudo')
         passion = request.form.get('passion')
-        # Stocker les données dans la session
+        #On stock les données dans la session active
         session['pseudo'] = pseudo
         session['passion'] = passion
         return redirect(url_for('home'))
