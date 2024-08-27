@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Ma Page</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    {% block content %}
+    <main>
+        <h1>{{ variable }}</h1>
+        <h1>C'est la fête</h1>
+        {% if pseudo != 'pseudo non définie' %}
+            <h3>Bonjour {{ pseudo }}</h3>
+        {% else %}
+            <h3>Bonjour invité</h3>
+        {% endif %}
+        <p>Pikachu (ピカチュウ, Pikachū?) est une espèce de Pokémon, une créature de fiction issue de la franchise médiatique Pokémon de Nintendo. Il est apparu la première fois au Japon en 1996, dans les jeux vidéo Pokémon Vert et Pokémon Rouge, créés par Satoshi Tajiri. Initialement conçu comme un personnage secondaire, Pikachu est devenu la mascotte de l'univers Pokémon après avoir été choisi comme personnage principal dans l'adaptation télévisuelle du jeu, aux côtés de son dresseur Sacha. Il apparaît depuis de manière récurrente dans le marketing de la franchise, au point de désigner parfois celle-ci par métonymie.</p>
+        <a href="liste.html">découvre ce qu'il te faut pour un pot au feu</a>
+        <br>
+        <a href="index.html">revenir à l'accueil et supprimer les cookies</a>
+    </main>
+    {% endblock %}
+</body>
+
+</html>

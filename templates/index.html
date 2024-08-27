@@ -1,0 +1,31 @@
+{% extends "base.html" %} 
+<!DOCTYPE html>
+<html>
+   
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body>
+    {% block content %} 
+    <main><p>Cliquez sur le lien ci-dessous pour créer le cookie 'pseudo'.</p>
+        <a href="{{ url_for('set_cookie') }}">Créer le cookie 'pseudo'</a>
+        <br>
+        <a href="{{ url_for('ma_page') }}">Aller à Ma Page</a>
+        <br>
+        <form method="POST" action="{{ url_for('home') }}">
+            <div>
+                <label>Pseudo</label>
+                <input type="text" name="pseudo" placeholder="Rentre ton pseudo" required>
+            </div>
+            <div>
+                <label>Passion</label>
+                <input type="text" name="passion" placeholder="Quelle est ta passion" required>
+            </div>
+            <button type="submit">Envoyer</button>
+        </form>
+    </main>
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body>
+    <header>
+        <img src="static\images\pikachulogo.png">
+        <h1>LES DEFIS FLASK DE XAVIER</h1>
+        {% if session.get('pseudo') %}
+            <p>Bonjour {{ session['pseudo'] }} fan de {{ session.get('passion', 'rien') }} !</p>
+        {% else %}
+            <p>Bonjour invité !</p>
+        {% endif %}
+    </header>
+
+    {% block content %} 
+
+    {% endblock %}
+
+    <footer>  
+        <p>Xavier aout 2024</p>  
+    </footer>
+</body>
+</html>

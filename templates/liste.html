@@ -1,0 +1,23 @@
+{% extends "base.html" %}  
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body>
+    {% block content %}
+    <main>  
+        <h1>{{ pseudo }} !! ce qu'il te faut pour un pot au feu!!</h1>
+        <ul>
+            {% for item in liste %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+        <a href="{{ url_for('home') }}">Retour à l'accueil</a>
+    </main>
+    {% endblock %}
+</body>
+</html>
